@@ -1,4 +1,4 @@
-import {DoSomethingEvent} from "./DoSomethingEvent";
+import {SomethingWasDone} from "./SomethingWasDone";
 import {ProducesEvents} from "./ProducesEvents";
 
 class SomeEntity implements ProducesEvents {
@@ -9,7 +9,7 @@ class SomeEntity implements ProducesEvents {
     }
 
     public doSomething() {
-        this.eventBag.record(new DoSomethingEvent('Something happened'));
+        this.eventBag.record(new SomethingWasDone('Something happened'));
     }
 
     public getEvents() {
