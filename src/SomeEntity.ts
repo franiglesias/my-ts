@@ -1,7 +1,9 @@
 import {SomethingWasDone} from "./SomethingWasDone";
 import {ProducesEvents} from "./ProducesEvents";
+import {EventBag} from "./EventBag";
+import {DomainEvent} from "./DomainEvent";
 
-class SomeEntity implements ProducesEvents {
+export class SomeEntity implements ProducesEvents {
     eventBag: EventBag;
 
     constructor() {
@@ -12,7 +14,7 @@ class SomeEntity implements ProducesEvents {
         this.eventBag.record(new SomethingWasDone('Something happened'));
     }
 
-    public getEvents() {
+    public getEvents(): DomainEvent[] {
         const recorded = this.eventBag.getEvents();
         this.eventBag = new EventBag()
         return recorded;

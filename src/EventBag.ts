@@ -1,4 +1,6 @@
-class EventBag {
+import {DomainEvent} from "./DomainEvent";
+
+export class EventBag {
     private events: DomainEvent[] = [];
 
     record(event: DomainEvent) {

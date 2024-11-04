@@ -1,4 +1,5 @@
 import {ulid} from "ulid";
+import {DomainEvent} from "./DomainEvent";
 
 export class SomethingWasDone implements DomainEvent {
     data: any;
