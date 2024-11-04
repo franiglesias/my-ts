@@ -21,7 +21,7 @@ export class SomeEntityWithExtraCare implements ProducesEvents {
 
     /*
     * Protect ourselves from the possibility of the eventBag being undefined or
-    * event the concrete mechanism of recording events changing in the future.
+    * the concrete mechanism of recording events changing in the future.
     * */
     private recordedEvents(): DomainEvent[] {
         if (this.eventBag === undefined) {
@@ -35,7 +35,7 @@ export class SomeEntityWithExtraCare implements ProducesEvents {
 
     /*
     * Protect ourselves from the possibility of the eventBag being undefined or
-    * event the concrete mechanism of recording events changing in the future.
+    * the concrete mechanism of recording events changing in the future.
     * */
     private recordEvent(event: SomethingWasDone): void {
         if (this.eventBag === undefined) {
